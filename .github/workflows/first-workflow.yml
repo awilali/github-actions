@@ -1,0 +1,28 @@
+# The name of this Workflow is called 'first-workflow'
+# We can have many YAML files in this workflow. 
+
+# name is a keyname which cannot be changed
+# name is the name of the workflow
+name: First Workflow
+
+
+# the 'on' is also a reserved key name
+# It defines when the workflow will be executed. 
+# the events that will trigger this workflow will be defined here
+
+on: workflow_dispatch
+
+# 'workflow_dispatch' will make sure that we can manually trigger this workflow.
+# 'workflow_dispatch' is an event that waits for the user to manually start this workflow.
+
+jobs: #must be indented
+  first-job: #name of the job, must also be indented
+    runs-on: ubuntu-latest
+    #runs:on is the environment you want to use
+    #https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+        
+      - name: Print goodbye
+        run: echo "Done - bye!"
