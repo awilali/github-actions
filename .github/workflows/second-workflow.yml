@@ -1,7 +1,7 @@
 name: Second YAML file
 
 # Controls when the workflow will run
-on: workflow_disptach
+on: workflow_dispatch
 jobs:
   second-job:
     # The type of runner that the job will run on
